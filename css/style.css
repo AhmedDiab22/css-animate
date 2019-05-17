@@ -1,0 +1,200 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: monospace
+}
+.drawing{
+    width: 400px;
+    margin:  auto;
+}
+
+.shape{
+    margin: 60px 0 0 105px;
+    background-color: gold;
+    width: 200px;
+    height: 370px;
+    border-radius: 100px;
+    position: relative;
+    animation: move 3s alternate-reverse infinite;
+    box-shadow: 0px 31px 12px -5px #ccc;
+}
+.shape:after{
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 37px;
+    z-index: 9;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 1;
+    border-top: 20px solid #ddd;
+    border-bottom: 20px solid #ddd;
+    border-left: 20px solid #ddd;
+    border-right: 20px solid #ddd;
+
+}
+
+.aye{
+    overflow: hidden;
+}
+.aye:after{
+    position: absolute;
+    content: '';
+    top: 60px;
+    left: 70px;
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #333;
+    animation: balckayeleft alternate 9s infinite;
+}
+
+.aye:before{
+    position: absolute;
+    content: '';
+    top: 50px;
+    left: 57px;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    z-index: 3;
+    background-color: gold;
+    animation: updowun 3s alternate infinite;
+}
+
+
+.line:before{
+    content: '';
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 45px;
+    height: 25px;
+    background-color: #000;
+}
+.line:after{
+    content: '';
+    position: absolute;
+    top: 85px;
+    right: 0;
+    width: 45px;
+    height: 25px;
+    background-color: #000;
+}
+.hiders{
+    position: relative;
+}
+.hide:after{
+    position: absolute;
+    content: '';
+    top: 164px;
+    left: -36px;
+    z-index: 99;
+    width: 50px;
+    height: 76px;
+    transform: rotate(316deg);
+    border-top: 28px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid transparent;
+    border-right: 27px solid #1560bd;
+}
+
+.hide:before{
+    position: absolute;
+    content: '';
+    top: 164px;
+    right: -46px;
+    z-index: 99;
+    width: 51px;
+    height: 78px;
+    transform: rotate(-316deg);
+    border-top: 29px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-left: 28px solid #1560bd;
+    border-right: 23px solid transparent;
+}
+
+.bootom:after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    top: 75%;
+    left: 0;
+    right: 0;
+    background: #1560bd;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px
+}
+
+.bootom:before{
+    content: '';
+    position: absolute;
+    bottom: 52px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    background: #1560bd;
+}
+
+.square:before{
+    content: '';
+    position: absolute;
+    bottom: 65px;
+    z-index: 9999;
+    left: 65px;
+    width: 70px;
+    height: 70px;
+    background: #195bac;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+/* Body move Up Doun */
+
+
+@keyframes move {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+    
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translatey(-20px);
+    }
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+}
+
+
+/* aye up down */ 
+
+@keyframes updowun{
+    0% {
+        height: 45px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    50% {
+        height: 45px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    80%{
+        height: 85px;
+    }
+    100% {
+        height: 85px;
+    }
+}
+
